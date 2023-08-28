@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/LightGreen"
+    android:layout_height="match_parent"
+    tools:context=".HomeStarted">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LayoutCLc1">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EnShop"
+        android:id="@+id/tvEnShop"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Category -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:id="@+id/tvCategory"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEnShop"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <!-- Card View Category -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/cvCategories"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCategory">
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:id="@+id/horizontalscroll"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeCategory">
+
+            <!-- CV Automotive -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:id="@+id/cvAutomotive"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/automotive"
+                    android:id="@+id/pctAutomotive"/>
+
+                <TextView
+                    android:id="@+id/tvAutomotive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="55dp"
+                    android:text="Automotive"
+                    android:textColor="@color/black"
+                    android:textSize="8dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+            <!-- End of CV Automotive -->
+
+            <!-- CV Mens Bags -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvMenBag"
+                android:layout_toRightOf="@id/cvAutomotive"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/bagmen"
+                    android:id="@+id/pctBagMen"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBagMen"
+                    android:text="Men bags"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="57dp"/>
+            </androidx.cardview.widget.CardView>
+            <!-- End of CV Mens Bags -->
+
+            <!-- CV Women Bags -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvWomenBag"
+                android:layout_toRightOf="@id/cvMenBag"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/bagwomen"
+                    android:id="@+id/pctWomenBag"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBagWomen"
+                    android:text="Women Bags"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="57dp"/>
+            </androidx.cardview.widget.CardView>
+            <!-- End of CV Women Bags -->
+
+            <!--CV Electronics -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvElectronic"
+                android:layout_toRightOf="@id/cvWomenBag"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/electronic"
+                    android:id="@+id/pctElectronic"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvElectronic"
+                    android:text="Electronic"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="57dp"/>
+            </androidx.cardview.widget.CardView>
+            <!--End of CV Electronics-->
+
+            <!-- CV Laptop -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvLaptop"
+                android:layout_toRightOf="@id/cvElectronic"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/laptop"
+                    android:id="@+id/pctLaptop"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvLaptop"
+                    android:text="Laptop"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="57dp"/>
+            </androidx.cardview.widget.CardView>
+            <!-- End of CV Laptop -->
+
+            <!-- CV Mens Wear -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvMenWear"
+                android:layout_toRightOf="@id/cvLaptop"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/menwear"
+                    android:id="@+id/pctMenWear"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMenWear"
+                    android:text="Men Wear"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+            <!--End of CV Mens Wear-->
+
+            <!--CV Womens Wear-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvWomenWear"
+                android:layout_toRightOf="@id/cvMenWear"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/womenwear"
+                    android:id="@+id/pctWomenWear"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWomenWear"
+                    android:text="Women Wear"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+            <!--End of Womens Wear-->
+
+            <!--CV Handphone-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvPhone"
+                android:layout_toRightOf="@id/cvWomenWear"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/phone"
+                    android:id="@+id/pctPhone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPhone"
+                    android:text="Handphone"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+            <!--End of CV Phone-->
+
+            <!-- CV Shoes -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvShoes"
+                android:layout_toRightOf="@id/cvPhone"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/shoes"
+                    android:id="@+id/pctShoes"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvShoes"
+                    android:text="Shoes"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+            <!-- End of CV Shoes -->
+
+            <!-- CV Watch Men-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvWatchMen"
+                android:layout_toRightOf="@id/cvShoes"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/watchmen"
+                    android:id="@+id/pctWatchMen"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWatchMen"
+                    android:text="Men Watch"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+            <!--End of CV Men Watch-->
+
+            <!--CV Womens Watch -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="55dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/cvWatchWomen"
+                android:layout_toRightOf="@id/cvWatchMen"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/White">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/watchwomen"
+                    android:id="@+id/pctWatchWomen"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWatchWomen"
+                    android:text="Watch Women"
+                    android:textSize="8dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"/>
+            </androidx.cardview.widget.CardView>
+        <!-- End of Womens Watch -->
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </androidx.cardview.widget.CardView>
+    <!-- End of Category -->
+
+    <!-- Card View for Flash Sale -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/CardView_FlashSale"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvCategories"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FLASH SALE"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:id="@+id/tvFlashSale"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15dp"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/LayoutHSL2">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ConstraintLayoutFS">
+                    <!--Card View FS Downy-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/cvFS1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/downy"
+                            android:id="@+id/pctDowny"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 22.701"
+                            android:textStyle="bold"
+                            android:textColor="@color/Green"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_horizontal"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <!--End of Card View FS Downy -->
+
+                    <!-- Card View FS Cardi OuterWear-->
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/cvFS2"
+                        app:layout_constraintLeft_toRightOf="@id/cvFS1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cardiouterwear"
+                            android:id="@+id/pctCardiOuterWear"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 22.701"
+                            android:textStyle="bold"
+                            android:textColor="@color/Green"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_horizontal"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <!--End of Card View Cardi OuterWear-->
+
+                    <!--Card View Animate Toner-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/cvFS3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/cvFS2"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/animatetoner"
+                            android:id="@+id/pctAnimateToner"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 22.701"
+                            android:textStyle="bold"
+                            android:textColor="@color/Green"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_horizontal"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <!--End of Card View Animate Toner-->
+
+                    <!--Card View Power Bank-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="160dp"
+                        android:id="@+id/cvFS4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/cvFS3"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/powerbank"
+                            android:id="@+id/pctPowerBank"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. 22.701"
+                            android:textStyle="bold"
+                            android:textColor="@color/Green"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_horizontal"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <!--End of Card View Power Bank-->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
+    <!-- End of Card View for Flash Sale -->
+
+
+    <!-- Card View details for Home Feed 1-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF1"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CardView_FlashSale"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/bagransel"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="DHON.ID Tas-Ransel Waterproof laptop tas punggug"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg1"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 209.400"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg1"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 1-->
+
+    <!-- Card View details for Home Feed 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF2"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/cvHF1"
+            app:layout_constraintTop_toBottomOf="@id/CardView_FlashSale"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/redmi12"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Xiaomi Redmi 12 RAM 8/128GB RAM 8/256GB redmi 12C"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg2"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 1.299.000"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg2"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 2-->
+
+    <!--Card View details for Home Feed 3-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF3"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvHF1"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/stripingmio"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="STRIPING TRANSPARAN MIO AMORE MIO SPORTY MIO MX"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg3"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 116.000"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg3"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 3-->
+
+    <!-- Card View details for Home Feed 4 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF4"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/cvHF3"
+            app:layout_constraintTop_toBottomOf="@id/cvHF1"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/kahf"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="KAHF Oil and Acne Care Face Wash 100ml "
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg4"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 36.500"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg4"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 4-->
+
+    <!-- Card View details for Home Feed 5-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF5"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvHF3"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/aerostreet"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Aerostreet 37-44 Comfy Hitam - Sepatu Slip On Slop"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg5"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 155.500"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg5"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 5 -->
+
+    <!-- Card View details for Home Feed 6-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="230dp"
+            android:id="@+id/cvHF6"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toRightOf="@id/cvHF5"
+            app:layout_constraintTop_toBottomOf="@id/cvHF3"
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/motul"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Oli Motor Motul 3000 PLUS 4T 20W50 0.8L"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/NamaBrg6"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:layout_marginBottom="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Rp. 70.311"
+                android:gravity="start"
+                android:layout_gravity="bottom"
+                android:id="@+id/HargaBrg6"
+                android:textStyle="bold"
+                android:textColor="@color/Green"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+        </androidx.cardview.widget.CardView>
+    <!-- End of Card View details for Home Feed 6-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
